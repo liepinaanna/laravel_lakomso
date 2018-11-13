@@ -6,24 +6,25 @@
 @include('partials.lakomso_menu_blog')
 <main role="main" class="container-fluid" >       
 <section id="contacts" class="sections">
-    <div class="container">
+    <div class="container" id="blog-container">
 
         
      
         <div class="row">
-            <div class="card">
+            <div class="card" id="blog-cards">
                 <div class="card-body">
                           
-                    <a class="blockquote mb-0" href="/blogs/{{$todo->id}}">
-                        <p>{{ $todo->title }}</p>
+                    <a href="/blogs/{{$todo->id}}">
+                        <h4>{{ $todo->title }}</h4>
                     </a>
+
                     <p class="card-text">
                         <small class="text-muted">{{ $todo->created_at->toFormattedDateString() }}</small>
                     </p>
                     
-                    <blockquote class="blockquote mb-0">
-                       <p>{{ $todo->body }}</p>
-                    </blockquote>
+                    
+                    <p>{{ $todo->body }}</p>
+                    
                     
                     
                     

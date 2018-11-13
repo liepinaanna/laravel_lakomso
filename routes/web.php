@@ -13,7 +13,6 @@
 
 Route::get('/', function () {
 
-    
     return view('lakomso');
 });
 
@@ -57,25 +56,15 @@ Route::get('/blogs/{id}', function($id) {
     return view('blog-page', [
         'todo' => $todo
     ]);
-    
-    /*$todo = \App\Todo::find($id);
-    return view('blog-page',[
-        'todos'=>$todo,
-    ]);
-    
-    $todosNoDatubazes = \App\Todo::find($id)->get();
-    
-    return view('blog-page', [
-        'todos' => $todo->id,
-    ]);*/
+
  });
 
 
 
-Route::get('/contacts', function () {
+Route::get('/contact', function () {
 
     
-    return view('contacts');
+    return view('contact');
 });
 
 Route::get('/login', function () {
@@ -85,11 +74,39 @@ Route::get('/login', function () {
 });
 
 
+/* Route::any('/newcontact', function () {
+
+    $jaunsContact = new  \App\Contact;
+
+    $jaunsContact->name = \Request('name');
+    $jaunsContact->email = \Request('email');
+    $jaunsContact->message = \Request('message');
+
+    $jaunsContact->save();
+
+    return redirect('/contact');
+    
+
+ });*/
+
+Route::get('contact', 'ContactController@create');
+Route::post('contact', 'ContactController@store');
 
 
 
 
+Auth::routes();
 
+Route::get('/home', 'HomeController@index')->name('home');
+
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');
+
+/*
+Route::get('user/create', 'HomeController@create');
+
+Route::post('user/create', 'HomeController@store');*/
 
 
 /* Route::get('/', function () {
@@ -142,12 +159,3 @@ Route::get('/update/{id}', function($id){
 
 
 
-
-
-Auth::routes();
-
-Route::get('/home', 'HomeController@index')->name('home');
-
-Auth::routes();
-
-Route::get('/home', 'HomeController@index')->name('home');

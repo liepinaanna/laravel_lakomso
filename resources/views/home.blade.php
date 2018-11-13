@@ -5,7 +5,7 @@
     <div class="row justify-content-center">
         <div class="col-md-8">
             <div class="card">
-                <div class="card-header">Create blog post</div>
+                <div class="card-header">Jauns bloga ieraksts</div>
 
                 <div class="card-body">
                     @if (session('status'))
@@ -19,11 +19,11 @@
                         @csrf
 
                         <div class="modal-body">
-                            <textarea name="note" class="form-control" id="noteTextArea" rows="1" placeholder="title"></textarea>
-                            <textarea name="body-text" class="form-control" id="noteTextArea" rows="10" placeholder="text"></textarea>
+                            <textarea name="note" class="form-control" id="noteTextArea" rows="1" placeholder="Nosaukums"></textarea><br>
+                            <textarea name="body-text" class="form-control" id="noteTextArea" rows="10" placeholder="Teksts"></textarea>
                         </div>
                         <div class="modal-footer">
-                            <button type="submit" class="btn btn-secondary">Add blog post</button>
+                            <button type="submit" class="btn btn-secondary">Pievienot bloga ierakstu</button>
                         </div>
                     </form>
                     

@@ -28,7 +28,7 @@
                 
 
                 <li class="nav-item">
-                    <a class="nav-link sazinaties" href="/contacts">Sazinies ar mums!</a>
+                    <a class="nav-link sazinaties" href="/contact">Sazinies ar mums!</a>
                 </li>
             </ul>
 

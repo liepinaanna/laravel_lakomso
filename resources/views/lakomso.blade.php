@@ -14,7 +14,8 @@
                 <div class="col-md-12 col-lg-8" >
                     <img class="img-fluid" src="{{ asset('images/logo_big.png') }}">
                     <p><h1 class="display-4">Aizsargpalagi Jūsu labsajūtai</h1></p>
-                    <p class="lead">Lakomso piedāvā kvalitatīvu preci, kas sniegs labsajūtu un komfortu ikdienā. Pasargās matraci no netīrumiem un  šķidrumiem. Būs kā barjera pret putekļu ērcītēm.</p>
+                    <p class="lead">Lakomso piedāvā kvalitatīvu preci, kas sniegs labsajūtu un komfortu Jūsu ikdienā. Mūsu aizsargpalagi aizsargās Jūsu matraci no netīrumiem un palīdzēs cīņā ar alerģijām!</p>
+                    <a href="#offer" class="intro-down"><img src="{{ asset('images/Down-Arrow-PNG-File.png') }}"></a>
                 </div>
             </div>
         </div>
@@ -103,15 +104,15 @@
         <section id="about" class="sections">
             <div class="container">
                 <div class="row">
-                    <div class="col-lg-8 ">
+                    <div class="col-lg-6">
                         <div class="about-text slideanim text-center">
                             <div class="display-4 text-center">Par aizsargaudumu</div>
-                                <p style="text-align:justify;"><br>Mūsu aizsargpalagi tiek ražoti no augstas kvalitātes antialerģiska auduma. Tas ir mitruma necaurlaidīgs audums, kurš sastāv no diviem slāņiem - kokvilnas virskārta un poliuretāna membrānas pārklājums. Šis īpašais pārklājums neļauj caursūkties šķidrumam, taču saglabā auduma gaisa caurlaidību. Šis ir lielisks veids kā ne tikai pasargāt savu matraci no netīrumu un šķidrumu iesūkšanās, bet arī pasargā Jūs no matračos mītošajām putekļu ērcītēm!<br>
+                                <p style="text-align:justify;">Mūsu aizsargpalagi tiek ražoti no augstas kvalitātes antialerģiska auduma. Tas ir mitruma necaurlaidīgs audums, kurš sastāv no diviem slāņiem - kokvilnas virskārta un poliuretāna membrānas pārklājums. Šis īpašais pārklājums neļauj caursūkties šķidrumam, taču saglabā auduma gaisa caurlaidību. Šis ir lielisks veids kā ne tikai pasargāt savu matraci no netīrumu un šķidrumu iesūkšanās, bet arī pasargā Jūs no matračos mītošajām putekļu ērcītēm!<br>
                                 <h4 style="color:darkred;">RAŽOTS LATVIJĀ!</h4></p>
 
                                
                                     <h4 class="text-center">Mūsu produktus iesaka <br>Latvijas Astmas un Alerģijas biedrība</h4>
-                                    <a href="http://www.astmaalergija.lv/?id_p=p2&id=348&fbclid=IwAR2_ZE8DFpkIiHMRyue1pok9x8WbMdwYUcyzg51m0yVb5T8LF0D0pW_naHI"target="_blank"><img src="{{ asset('images/astmaalergija_logo.jpg') }}"></a>
+                                    <a href="http://www.astmaalergija.lv/?id_p=p2&id=348&fbclid=IwAR2_ZE8DFpkIiHMRyue1pok9x8WbMdwYUcyzg51m0yVb5T8LF0D0pW_naHI"target="_blank"><img style="max-width:180px;" src="{{ asset('images/astmaalergija_logo.jpg') }}"></a>
                                 
                                 
 
@@ -167,33 +168,13 @@
 
         </section>
         <section id="reviews" class="sections">
-            <div class="container">
-                    <div class="display-4 text-center">Atsauksmes</div>
-                <div class="row">
-                        
-                        <div class="col-lg-4 text-center">
-                          <img class="rounded-circle" src="{{ asset('images/author-4.jpg') }}">
-                          <p><h2>Heading</h2></p>
-                          <p>Donec sed odio dui. Etiam porta sem malesuada magna mollis euismod. Nullam id dolor id nibh ultricies vehicula ut id elit. Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Praesent commodo cursus magna.</p>
-                          
-                        </div><!-- /.col-lg-4 -->
-                        <div class="col-lg-4 text-center">
-                          <img class="rounded-circle" src="{{ asset('images/author-6.jpg') }}">
-                          <p><h2>Heading</h2></p>
-                          <p>Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Cras mattis consectetur purus sit amet fermentum. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh.</p>
-                          
-                        </div><!-- /.col-lg-4 -->
-                        <div class="col-lg-4 text-center">
-                          <img class="rounded-circle" src="{{ asset('images/author-3.jpg') }}">
-                          <p><h2>Heading</h2></p>
-                          <p>Donec sed odio dui. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Vestibulum id ligula porta felis euismod semper. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.</p>
-                          
-                        </div><!-- /.col-lg-4 -->
-                      </div><!-- /.row -->
+        <div class="container">
+            <div class="display-4 text-center">Atsauksmes</div>
 
-                    </div>
 
-                <div class="container">
+
+
+
                 @include('partials.carousel')
                 </div>
 
@@ -201,6 +182,6 @@
         </section>
  
         </main>
-        
+        @include('partials.lakomso_modals')  
       
 @endsection

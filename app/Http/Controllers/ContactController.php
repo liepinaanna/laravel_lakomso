@@ -2,10 +2,10 @@
 
 namespace App\Http\Controllers;
 
-use App\Prece;
+use App\Contact;
 use Illuminate\Http\Request;
 
-class PreceController extends Controller
+class ContactController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -24,7 +24,7 @@ class PreceController extends Controller
      */
     public function create()
     {
-        //
+        return view('contact');
     }
 
     /**
@@ -35,16 +35,41 @@ class PreceController extends Controller
      */
     public function store(Request $request)
     {
-        //
+       /* dd($request->name);*/
+        $this->validate($request,[
+            'name' => 'required',
+            
+            'email' => 'required|email',
+            'message' => 'required',
+            
+        ],[
+            'name.required' => ' The name field is required.',
+            'email.required' => ' The email field is required.',
+            'message.required' => ' The message field is required.',
+            
+        ]);
+        $jaunsContact = new  \App\Contact;
+
+        $jaunsContact->name = \Request('name');
+        $jaunsContact->email = \Request('email');
+        $jaunsContact->message = \Request('message');
+    
+        $jaunsContact->save();
+    
+        return redirect('/contact');
+
+
+
+        return redirect('/contact');
     }
 
     /**
      * Display the specified resource.
      *
-     * @param  \App\Prece  $prece
+     * @param  \App\Contact  $contact
      * @return \Illuminate\Http\Response
      */
-    public function show(Prece $prece)
+    public function show(Contact $contact)
     {
         //
     }
@@ -52,10 +77,10 @@ class PreceController extends Controller
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  \App\Prece  $prece
+     * @param  \App\Contact  $contact
      * @return \Illuminate\Http\Response
      */
-    public function edit(Prece $prece)
+    public function edit(Contact $contact)
     {
         //
     }
@@ -64,10 +89,10 @@ class PreceController extends Controller
      * Update the specified resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
-     * @param  \App\Prece  $prece
+     * @param  \App\Contact  $contact
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, Prece $prece)
+    public function update(Request $request, Contact $contact)
     {
         //
     }
@@ -75,10 +100,10 @@ class PreceController extends Controller
     /**
      * Remove the specified resource from storage.
      *
-     * @param  \App\Prece  $prece
+     * @param  \App\Contact  $contact
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Prece $prece)
+    public function destroy(Contact $contact)
     {
         //
     }
